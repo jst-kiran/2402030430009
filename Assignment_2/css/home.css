@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: #ffffff;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.navbar li,a{
+    margin: 10px; 
+    font-size: 20px;   
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;   
+    display: inline-block;
+    position: relative;
+}
+.nav-links a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 1s ease-out;
+}
+.nav-links a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+header{
+    background-image: url("/images/home_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header .head-lines{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+header h1{
+    font-size: 50px;
+    color: #ffffff;
+    width: 48%;
+    text-align: left;
+}
+header p{
+    font-size: 25px;
+    text-align: left;
+    width: 48%;
+    padding-top: 20px;
+    font-weight: 400;
+    color: white;
+}
+.features{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    background-color: #ffffff;
+}
+.features .f1, .f2, .f3, .f4{
+    height: 25%;
+    width: 25%;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.features .icon{
+    height: 100%;
+    width: 30%;
+    font-size: 50px;
+    margin: 10px 10px 10px 20px;
+}
+.features .details{
+    height: 100%;
+    width: 70%;
+}
+.f1{
+    background-color: rgb(226, 165, 165);
+}
+.f2{
+    background-color: rgb(164, 220, 147);
+}
+.f3{
+    background-color: rgb(149, 148, 222);
+}
+.f4{
+    background-color: rgb(244, 248, 165);
+}
+.categories{
+    width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+}
+.categories h1{
+    font-size: 50px;
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center; 
+}
+.categories .cat{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cat .home-and-living, .fashion, .jewellery, .gifts{
+    height: 100%;
+    width: 25%;
+    padding: 10px;
+}
+.fashion .image{
+    width: 75%;
+    height: 100%;
+    margin-left: 35px;
+}
+.image img{
+    width: 100%;
+}
+.cat h3{
+    font-family: "Baskervville SC", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center; 
+    font-size: 25px;
+}
+.best-sales{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.best-sales h1{
+    font-size: 50px;
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center; 
+}
+.bs{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bs .bs1, .bs2, .bs3, .bs4{
+    height: 100%;
+    width: 25%;
+    padding: 10px;
+}
+.best-sales .image{
+    width: 100%;
+    height: 100%;
+}
+.bs img{
+    height: 100%;
+    width: 100%;
+}
+.bs h3{
+    font-family: "Baskervville SC", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center; 
+    font-size: 25px;
+    /* border: 1px solid black; */
+}
+
+/* -----------------footer----------------- */
+footer{
+    margin-top: 100px;
+    padding: 30px 10px 0 20px;
+    height: 400px;
+    background-color: rgb(73, 109, 73);
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+}
+footer .footer1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style-type: none;
+}
+.footer1 .cc, .top-categories, .imp-links, .contact{
+    width: 25%;
+    text-align: center;
+}
+.footer1 a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.footer1 h3{
+    padding-bottom: 8px;
+}
+.footer1 p,li{
+    font-size: 20px;
+}
+.footer2{
+    text-align: center;
+    padding-top: 150px;
+    font-size: 20px;
+}

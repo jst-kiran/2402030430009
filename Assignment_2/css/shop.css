@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.wrapper{
+    width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: #ffffff;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.navbar li,a{
+    margin: 10px; 
+    font-size: 20px;   
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;   
+    display: inline-block;
+    position: relative;
+}
+.nav-links a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 1s ease-out;
+}
+.nav-links a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+header{
+    background-image: url("/images/product_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    font-size: 150px;
+    color: #ffffff;
+    width: 48%;
+    text-align: center;
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* -------------buttons------------- */
+.buttons {
+    margin:30px auto !important ;  
+}
+.bt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 300px;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  .filter-by-cat {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .filter-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .filter-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .filter-by-cat a:hover {background-color: #ddd;}  
+  .show {display: block;}
+
+  :root {
+    --dur: .3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    /* --color-brand: #57bd84; */
+    --btn-width: 6rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+  }
+  .search form {
+    position: relative;
+    width: 30rem;
+    /* background: var(--color-brand); */
+    border-radius: 8px;
+  }
+  .search input, button {
+    height: 50px;
+    border: 1px solid #3498DB;
+    color: var(--color-dark);
+    font-size: 20px;
+  }
+  .search input[type="search"] {
+    outline: 0; 
+    width: 100%;
+    background: 8px;
+    padding: 0 1.6rem;
+    border-radius: 8px;
+    appearance: none; 
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+  }
+  .search button {
+    display: none;  
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    background: var(--color-brand);
+    border-radius: 0 var(--rad) var(--rad) 0;
+  }
+  .search input:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+    + button {
+      display: block;
+    }
+  }
+  .search label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+  /* -----------products---------- */
+.products {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.pr{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.pr .pr1, .pr2, .pr3, .pr4{
+    height: 100%;
+    width: 25%;
+    padding: 10px;
+}
+.products .image{
+    width: 100%;
+    height: 100%;
+}
+.pr img{
+    height: 100%;
+    width: 100%;
+}
+.pr h3{
+    font-family: "Baskervville SC", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center; 
+    font-size: 25px;
+    /* border: 1px solid black; */
+}
+  
+/* -------------footer---------------- */
+footer{
+    margin-top: 100px;
+    padding: 30px 10px 0 20px;
+    height: 400px;
+    background-color: rgb(73, 109, 73);
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+}
+footer .footer1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style-type: none;
+}
+.footer1 .cc, .top-categories, .imp-links, .contact{
+    width: 25%;
+    text-align: center;
+}
+.footer1 a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.footer1 h3{
+    padding-bottom: 8px;
+}
+.footer1 p,li{
+    font-size: 20px;
+}
+.footer2{
+    text-align: center;
+    padding-top: 150px;
+    font-size: 20px;
+}
